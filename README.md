@@ -1,16 +1,16 @@
-<font color='red>Some of The Most Important SQL Commands </font>
-DDL(Data Definition Language) Creating table structure
-    • SELECT- extracts data from a database
-    • CREATE DATABASE- creates a new database
-    • ALTER DATABASE- modifies a database
-    • CREATE TABLE- creates a new table
-    • ALTER TABLE- modifies a table
-    • DROP TABLE- deletes a table
-    • CREATE INDEX- creates an index (search key)
-    • DROP INDEX- deletes an index
-    • Truncate- Remove all records from table
-    • Rename- rename an object
-DML( Data Manupulation Language)
+# Some of The Most Important SQL Commands
+## DDL(Data Definition Language) Creating table structure
+    -[ ] SELECT- extracts data from a database
+    -[ ] CREATE DATABASE- creates a new database
+    -[ ] ALTER DATABASE- modifies a database
+    -[ ] CREATE TABLE- creates a new table
+    -[ ] ALTER TABLE- modifies a table
+    -[ ] DROP TABLE- deletes a table
+    -[ ] CREATE INDEX- creates an index (search key)
+    -[ ] DROP INDEX- deletes an index
+    -[ ] Truncate- Remove all records from table
+    -[ ] Rename- rename an object
+# DML( Data Manupulation Language)
     • INSERT INTO- inserts new data into a database
       insert into employees(emp_id,f_name,L_name,salary) values(1,’qasim’,’khan’1000);
     • UPDATE- updates data in a database(update employees set last_name =’ali’ where emp_id in (6);
