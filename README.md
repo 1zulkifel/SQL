@@ -48,11 +48,11 @@
     - NOT (5>4) True
       ** select * from employees where First_Name='qasim' and salary !=3000;
 ## SQL Comparison Operators.(<,>,>=,=<,!=)
-** select * from employees where First_Name='shuja' or salary <=1000;
-** select * from employees where First_Name='shuja' or salary >=2000;
-** select * from employees where First_Name='shuja' and salary !=2000;
-** select * from employees where First_Name='shuja' and salary >=2000;
-** select * from employees where salary <2000;
+  - select * from employees where First_Name='shuja' or salary <=1000;
+  - select * from employees where First_Name='shuja' or salary >=2000;
+  - select * from employees where First_Name='shuja' and salary !=2000;
+  - select * from employees where First_Name='shuja' and salary >=2000;
+  - select * from employees where salary <2000;
 ## SQL Operators – Aggregations
     - AVG() : Returns AVG
       ** select avg(salary)from employees;
