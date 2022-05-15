@@ -1,4 +1,4 @@
-Some of The Most Important SQL Commands
+<font color='red>Some of The Most Important SQL Commands </font>
 DDL(Data Definition Language) Creating table structure
     • SELECT- extracts data from a database
     • CREATE DATABASE- creates a new database
