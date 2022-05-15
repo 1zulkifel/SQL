@@ -53,3 +53,14 @@
 ** select * from employees where First_Name='shuja' and salary !=2000;
 ** select * from employees where First_Name='shuja' and salary >=2000;
 ** select * from employees where salary <2000;
+## SQL Operators – Aggregations
+    - AVG() : Returns AVG
+      ** select avg(salary)from employees;
+    - count(): return number of table rows
+      ** select count(*) from employees;
+    - max(): return largest value among the record
+      ** select max(salary) from employees;
+    - min(): returns smallest value among the records
+      ** select min(salary) from employees;
+    - sum(): returns sum of specified column values
+      ** select sum(salary) from employees;
