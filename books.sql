@@ -52,7 +52,7 @@ select lower(auth_fname) from books;
 select concat('my favorite book name is ', upper(title)) from books;
 select concat(title, ' was released on ', released_year) as 'rel' from books;
 select title, char_length(title) as 'char len' from books;
--- Excersize 
+-- Exercise
 select replace(
 concat(title,' '), ' ','-') from books;
 
@@ -69,6 +69,7 @@ select concat(substring(title,1,10), '...')  as 'short title',
 		concat(stock_qty,' in the stock')  as quantity 
 from books;
 
+
 -- Refining actions 
 
 insert into books(
@@ -82,4 +83,46 @@ insert into books(
     ('LincoIn the The Hardo','George','saunders',2012,337,112 );
 
 select distinct auth_lname from books;
-select released_year from books;
+select * from books;
+-- logical operators
+select title,auth_fname,auth_lname,released_year from books where released_year!=2017 ;
+select title,auth_fname,released_year from books where auth_fname='Dubner' ;
+
+select title from books where title like '%t';
+select title from books where title like 's%';
+select title from books where title not like 'D%';
+
+select title,released_year from books where released_year >2017;
+select title,released_year from books where released_year >=2017 order by released_year;
+select title,stock_qty from books where stock_qty >300;
+
+
+
+select title,released_year from books where released_year <2017;
+select title,released_year from books where released_year <=2017 order by released_year;
+select title,stock_qty from books where stock_qty <300;
+
+-- &&
+select * from books;
+select * from books where auth_fname='hawking' and released_year=2017;
+
+select title,auth_fname,released_year from books where auth_fname='hawking' and released_year >=2000;
+
+select * from books where title='God Created the Integers' and released_year='true';
+
+select title,auth_fname,released_year from books where auth_fname='hawking' 
+  && released_year >=2000 && title like 'God Created the Integers';
+-- logical or
+select title,auth_fname,released_year from books where
+ auth_fname='hawking' || released_year >=2016;
+ 
+select title,auth_fname,released_year,stock_qty from books where
+ auth_fname='hawking' || released_year >=2016 || stock_qty>500;
+ 
+select title,released_year from books where released_year between 2014  and 2017;  
+
+select title,released_year from books where released_year not between 2014  
+  and 2017 order by released_year;
+  
+-- 'cast' it changes one data type into other data type
+ select * from books;
