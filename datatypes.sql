@@ -74,3 +74,4 @@ select date_format(now(),'%M %D at %h:%i');
 -- cast
 select name ,birthdate from peple where birthdate between 
 cast('1998-06-16' as datetime) and cast('2000-06-16' as datetime);
+-- Modulo
