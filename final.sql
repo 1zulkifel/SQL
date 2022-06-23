@@ -162,18 +162,43 @@ select first_name ,ifnull((title),'missing'),
 		ifnull((grade),0) from students
  left join papers
 on students.id=papers.student_id;
+--
+select first_name,
+	ifnull(avg(grade),0) as average
+from students
+left join papers
+	on students.id=papers.student_id
+group by students.id
+order by average desc;
 
 -- ??
 select first_name,
-		AVG(grade) as average
+		ifnull(AVG(grade),0) as average,
+        case
+			when avg(grade) >= 75 then 'Passing'
+            else 'Failing'
+		end as Passing_status 
 from students
 left join papers
-		on papers.student_id =students.id;
-group by student_id
+		on students.id =papers.student_id
+group by first_name
 order by average desc ;
 
 --
+select first_name,
+		ifnull(AVG(grade),0) as average,
+        case
+			when avg(grade) is null then 'Failing'
+			when avg(grade) >= 75 then 'Passing'
+            else 'Failing'
+		end as Passing_status 
+from students
+left join papers
+		on students.id =papers.student_id
+group by students.id
+order by average desc ;
 
+-- Many to many
 
 
 
