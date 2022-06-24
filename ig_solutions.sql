@@ -65,3 +65,28 @@ order by total desc;
 -- total avg post by a user
 select 
 	(select count(*) from photos)/(select count(*) from users) as 'avg';
+    
+-- for top most 6 used hash tags
+select 
+		tags.tag_name,
+		count(*) as total
+	from photo_tags
+join tags
+ on tags.id =photo_tags.tag_id
+ group by tags.id
+ order by total desc
+ limit 6;    
+ 
+ -- bots  user who liked every photo
+ select  
+		username,
+        user_id,
+        count(*) as num_likes
+ from users
+ inner join likes
+ on users.id=likes.user_id
+ group by likes.user_id
+ having num_likes = (select count(*) from photos);
+ 
+ --
+ 
